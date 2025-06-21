@@ -8,14 +8,14 @@ This is the writeup for the box Chocolate Factory
 - The website.
 - No useful information was found in `robots.txt`.
   
-![WebSite](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/00.png)
+  ![WebSite](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/00.png)
 
-![Robots.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/01.png)
+  ![Robots.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/01.png)
 
 ### 2. Fuzzing
 -  **Dirbuster / Gobuster** was used to find directories and files but no useful information was found.
 
-![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/02.png)
+  ![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/02.png)
 
 ## 📡 3. Nmap Scan
 - The following information was found:
@@ -24,48 +24,49 @@ This is the writeup for the box Chocolate Factory
   - The port 80 is open. **HTTP (Apache)**
   - ...
 
-![Nmap Scan](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/03.png)
+  ![Nmap Scan](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/03.png)
 
 ## 💉🛢️ 4. SQL Injection 
 
-"I tried to find some kind of SQL Injection vulnerability, but found nothing."
+- I tried to find some kind of SQL Injection vulnerability, but found nothing.
 
-![SQL Injection](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/05.png)
+  ![SQL Injection](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/05.png)
 
-![SQL Injection-2](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/06.png)
+  ![SQL Injection-2](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/06.png)
 
 ## 📡 5. Nmap Scan again
 
 - I checked again the Nmap scan and I found a fingerprint with a file named ```key_rev_key``` in the http://{ip}/key_rev
 
-![key_rev_key](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/07.png)
+  ![key_rev_key](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/07.png)
 
 - I downloaded the file and I used the following for checking its content:
 
-```
-hexdump -C key_rev_key
-```
-![hexdump](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/08.png)
+  ```
+  hexdump -C key_rev_key
+  ```
 
-The content of the file has a part that looks like a key:
+  ![hexdump](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/08.png)
 
-![hexdump](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/09.png)
+- The content of the file has a part that looks like a key:
 
-I made a copy of the file in .txt format and used the command ```cat key_rev_key.txt``` to get the first flag, which is the key
+  ![hexdump](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/09.png)
 
-![cp-content](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/10.png)
+- I made a copy of the file in .txt format and used the command ```cat key_rev_key.txt``` to get the first flag, which is the key
 
-![cat-content](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/11.png)
+  ![cp-content](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/10.png)
+
+  ![cat-content](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/11.png)
 
 ## 📁📤📥 6. FTP Access
 
 - I try to use the following credentials to access the FTP:
-```
-Username: anonymous
-Password: 
-```
+  ```
+  Username: anonymous
+  Password: 
+  ```
 
-![ftp-access](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
+  ![ftp-access](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
 
 - I found a file named ```gum_room.jpg``` in the root directory and I downloaded it.
 
@@ -73,17 +74,17 @@ Password:
 
 ![gum_room.jpg](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
 
-I used different tools to check if the image had hidden information 
+- I used different tools to check if the image had hidden information 
 
-![stegonography](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/14.png)
+  ![stegonography](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/14.png)
 
 - When I have used the command ```steghide extract -sf gum_room.jpg``` I got the following output: ```b64.txt```
 
-![steghide](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/15.png)
+  ![steghide](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/15.png)
 
 - After decoding the Base64 string, I got a list of password hashes similar to those in a shadow file.
 
-![decode-base64](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/16.png)
+  ![decode-base64](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/16.png)
 
 ## 🔓🗝️💻 8. Password Cracking
 
