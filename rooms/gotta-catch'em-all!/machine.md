@@ -87,3 +87,17 @@ The second flag was: ```Squirtle_SqUaD{Squirtle}```
 > [!NOTE]
 > The website used to identify the cipher and decrypt the text was:
 > https://www.dcode.fr/cipher-identifier
+
+Now, instead of searching manually for the fire-type.txt file, I performed a global search using the command: ```find / -type f -name fire-type.txt 2>/dev/null``` and it was located in the directory: ```/etc/why_am_i_here?```, the content of the file was a base64 string
+
+![fire-type.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/11.png)
+
+If I decode the base64 string, I got the third flag: ```P0k3m0n{Charmander}```
+
+![Base64-text](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/12.png)
+
+I decided to search again in this user's home directory and found a file called ```roots-pokemon```.
+When viewing its contents, I discovered another flag, which is the root user's favorite Pokémon
+```Pikachu!```
+
+![roots-pokemon](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/13.png)
