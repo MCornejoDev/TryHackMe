@@ -43,8 +43,7 @@ Password: hack_the_pokemon
 
 ![SSH Access](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/04.png)
 
-
-- After loggin in, I did a ls -la and saw that the following files were present: ```P0kEm0n.zip```
+- After loggin in, I did a ```ls -la``` and saw that the following files were present: ```P0kEm0n.zip```
 
 - I extracted the zip file and saw that the following files were present: ```grass-type.txt``` and the content of the file was a hex string.
 
@@ -53,3 +52,23 @@ Password: hack_the_pokemon
 - If I convert the hex string to ascii, I got the first flag: ```PoKeMon{Bulbasaur}```
 
 ![first-flag](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/06.png)
+
+I did a manual list of all folders and files in the user account and I found a file named 
+
+```Could_this_be_what_Im_looking_for?.cplusplus```
+
+The file opened had the following content:
+![content-file](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/07.png)
+
+I deduced that was a credentials ssh
+
+```
+Username: ash
+Password: pikapika
+```
+
+## 6. SSH Access (ash)
+
+- After logging in with the credentials
+
+![SSH Access (ash)](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/08.png)
