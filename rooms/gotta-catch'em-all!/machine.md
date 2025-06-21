@@ -8,4 +8,4 @@ This is the writeup for the box Gotta Catch'em All!
 - The website is running on Apache.
 - No useful information was found in `robots.txt`.
 
-![WebSite]()
+![WebSite](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/00.png)
