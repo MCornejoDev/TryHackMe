@@ -43,4 +43,13 @@ Password: hack_the_pokemon
 
 ![SSH Access](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/04.png)
 
-## 6.
+
+- After loggin in, I did a ls -la and saw that the following files were present: ```P0kEm0n.zip```
+
+- I extracted the zip file and saw that the following files were present: ```grass-type.txt``` and the content of the file was a hex string.
+
+![P0kEm0n.zip](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/05.png)
+  
+- If I convert the hex string to ascii, I got the first flag: ```PoKeMon{Bulbasaur}```
+
+![first-flag](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/06.png)
