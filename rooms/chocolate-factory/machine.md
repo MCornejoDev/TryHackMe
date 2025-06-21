@@ -72,7 +72,7 @@ This is the writeup for the box Chocolate Factory
 
 ## 🕵️‍♂️🖼️ 7. Steganography
 
-  ![gum_room.jpg](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
+    ![gum_room.jpg](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
 
 - I used different tools to check if the image had hidden information 
 
