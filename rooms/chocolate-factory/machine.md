@@ -57,3 +57,42 @@ I made a copy of the file in .txt format and used the command ```cat key_rev_key
 
 ![cat-content](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/11.png)
 
+## 📁📤📥 6. FTP Access
+
+- I try to use the following credentials to access the FTP:
+```
+Username: anonymous
+Password: 
+```
+
+![ftp-access](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
+
+- I found a file named ```gum_room.jpg``` in the root directory and I downloaded it.
+
+## 🕵️‍♂️🖼️ 7. Steganography
+
+![gum_room.jpg](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
+
+I used different tools to check if the image had hidden information 
+
+![stegonography](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/14.png)
+
+- When I have used the command ```steghide extract -sf gum_room.jpg``` I got the following output: ```b64.txt```
+
+![steghide](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/15.png)
+
+- After decoding the Base64 string, I got a list of password hashes similar to those in a shadow file.
+
+![decode-base64](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/16.png)
+
+## 🔓🗝️💻 8. Password Cracking
+
+- There is a user named ```charlie``` with a hashed password 
+
+  ![user-charlie](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/17.png)
+
+- I used the following command to crack the password of the user ```charlie```:
+
+  ```john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt```
+
+![password-cracked](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/18.png)
