@@ -70,9 +70,9 @@ This is the writeup for the box Chocolate Factory
 
 - I found a file named ```gum_room.jpg``` in the root directory and I downloaded it.
 
-## 🕵️‍♂️🖼️ 7. Steganography
+  ![gum_room.jpg](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
 
-- ![gum_room.jpg](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
+## 🕵️‍♂️🖼️ 7. Steganography
 
 - I used different tools to check if the image had hidden information 
 
