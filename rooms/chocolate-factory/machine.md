@@ -144,9 +144,9 @@ This is the writeup for the box Chocolate Factory
 
   ![sudo-vi](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/28.png)
 
-> [!NOTE]
-> The website used to identify if exists a command to escalate privileges has been:
-> https://gtfobins.github.io/gtfobins/vi/#sudo
+  > [!NOTE]
+  > The website used to identify if exists a command to escalate privileges has been:
+  > https://gtfobins.github.io/gtfobins/vi/#sudo
 
 - We need to navigate to the root folder. There, we see a file named root.py which, when executed, asks for a password (the first flag). If we enter it correctly, it gives us the final flag.
 
