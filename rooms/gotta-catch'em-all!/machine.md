@@ -58,6 +58,7 @@ I did a manual list of all folders and files in the user account and I found a f
 ```Could_this_be_what_Im_looking_for?.cplusplus```
 
 The file opened had the following content:
+
 ![content-file](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/07.png)
 
 I deduced that was a credentials ssh
