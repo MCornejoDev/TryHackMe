@@ -14,8 +14,8 @@ This is the writeup for the box Chocolate Factory
 
 ### 2. Fuzzing
 -  **Dirbuster / Gobuster** was used to find directories and files but no useful information was found.
-
-  ![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/02.png)
+  
+    ![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/02.png)
 
 ## 📡 3. Nmap Scan
 - The following information was found:
@@ -72,7 +72,7 @@ This is the writeup for the box Chocolate Factory
 
 ## 🕵️‍♂️🖼️ 7. Steganography
 
-![gum_room.jpg](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
+  ![gum_room.jpg](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
 
 - I used different tools to check if the image had hidden information 
 
@@ -96,4 +96,4 @@ This is the writeup for the box Chocolate Factory
 
   ```john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt```
 
-![password-cracked](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/18.png)
+  ![password-cracked](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/18.png)
