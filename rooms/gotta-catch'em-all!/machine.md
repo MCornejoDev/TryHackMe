@@ -9,5 +9,3 @@ This is the writeup for the box Gotta Catch'em All!
 - No useful information was found in `robots.txt`.
 
 ![WebSite](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/00.png)
-
-![robots.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/01.png)
