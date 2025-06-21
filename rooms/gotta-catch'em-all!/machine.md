@@ -27,14 +27,14 @@ This is the writeup for the box Gotta Catch'em All!
   </pokemon>
   ```
 
-## 4. Nmap Scan
+## 📡 4. Nmap Scan
 - The following information was found:
   - The port 22 is open. **SSH**
   - The port 80 is open. **HTTP (Apache)**
 
 ![Nmap Scan](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/03.png)
 
-## 5. SSH Access
+## 🔑 5. SSH Access
 - After wasting some time with the script we saw in the console, I decided to use the following credentials for try a ssh connection:
 ```
 Username: pokemon
@@ -68,8 +68,22 @@ Username: ash
 Password: pikapika
 ```
 
-## 6. SSH Access (ash)
+## 🔑 6. SSH Access (ash)
 
 - After logging in with the credentials
 
 ![SSH Access (ash)](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/08.png)
+
+I checked everywhere for flags and found the second file named water-type.txt in the website’s HTML folder.
+
+![water-type.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/09.png)
+
+The content of the file was a string with a Chiffre ROT (Rotation) and the text decrypted was the second flag:
+
+![Ciphered Text](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/gotta-catch'em-all!/screenshots/10.png)
+
+The second flag was: ```Squirtle_SqUaD{Squirtle}```
+
+> [!NOTE]
+> The web used for identify the cipher was and do a decryption of the text:
+> https://www.dcode.fr/cipher-identifier
