@@ -85,5 +85,5 @@ The content of the file was a string with a Chiffre ROT (Rotation) and the text 
 The second flag was: ```Squirtle_SqUaD{Squirtle}```
 
 > [!NOTE]
-> The web used for identify the cipher was and do a decryption of the text:
+> The website used to identify the cipher and decrypt the text was:
 > https://www.dcode.fr/cipher-identifier
