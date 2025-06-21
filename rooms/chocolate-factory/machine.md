@@ -26,7 +26,7 @@ This is the writeup for the box Chocolate Factory
 
 ![Nmap Scan](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/03.png)
 
-## 4. SQL Injection 
+## 💉🛢️ 4. SQL Injection 
 
 "I tried to find some kind of SQL Injection vulnerability, but found nothing."
 
