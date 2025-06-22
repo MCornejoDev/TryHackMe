@@ -11,9 +11,9 @@ This is the writeup for the box Agent Sudo
 ## 🧪🔍⚙️ 2. Fuzzing
 -  **Dirbuster / Gobuster** was used to find directories and files but no useful information was found.
   
-  ![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/cyborg/screenshots/01.png)
+    ![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/cyborg/screenshots/01.png)
 
-  ![Fuzzing-2](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/cyborg/screenshots/02.png)
+    ![Fuzzing-2](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/cyborg/screenshots/02.png)
 
 ## 📡 3. Nmap Scan
 - The following information was found:
@@ -100,7 +100,7 @@ This is the writeup for the box Agent Sudo
 
   ![root-user](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/17.png)
 
--If I do a ``` cat /root/root.txt``` I get the following output:
+- If I do a ``` cat /root/root.txt``` I get the following output:
 
   ![root-user](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/18.png)
 
