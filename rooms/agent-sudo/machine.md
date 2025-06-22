@@ -94,7 +94,7 @@ This is the writeup for the box Agent Sudo
   ![accident](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/16.png)
 
 ## 🐚💻🚀 12 Privilege Escalation
-- I used the command ```sudo -l``` to check the privileges of the user ```james``` and I located a vulnerability in the sudoers file - ![Vulnerability](https://blog.aquasec.com/cve-2019-14287-sudo-linux-vulnerability)
+- I used the command ```sudo -l``` to check the privileges of the user ```james``` and I located a vulnerability in the sudoers file - https://blog.aquasec.com/cve-2019-14287-sudo-linux-vulnerability
 
 - If I use the command ```sudo -u#-1 bash``` I have gotten to be root user:
 
