@@ -11,7 +11,7 @@ This is the writeup for the box Agent Sudo
 
 ## 🧪🔍⚙️ 2. Fuzzing
 -  **Dirbuster / Gobuster** was used to find directories and files but no useful information was found.
- 
+  
   ![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/agent-sudo/screenshots/01.png)
 
 - After spending a couple of minutes, the software found a list of files
