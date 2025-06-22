@@ -10,7 +10,7 @@ This is the writeup for the box Cyborg
   ![WebSite](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/cyborg/screenshots/00.png)
 
 ## 🧪🔍⚙️ 2. Fuzzing
--  **Dirbuster / Gobuster** was used to find directories and files but no useful information was found.
+-  **Dirbuster / Gobuster** was used to find directories and files:
   
     ![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/cyborg/screenshots/01.png)
 
