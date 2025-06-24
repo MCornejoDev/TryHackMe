@@ -4,7 +4,7 @@ This is the writeup for the box U.A High School
 
 ## 🔍 Enumeration Phase
 
-### 1. WebSite
+## 1. WebSite
 - The website is running on Apache.
 - No useful information was found in `robots.txt`.
 
@@ -12,7 +12,7 @@ This is the writeup for the box U.A High School
 
     ![robots.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/u.a.-high-school/screenshots/01.png)
 
-### 2. Fuzzing
+## 2. Fuzzing
 -  **Dirbuster / Gobuster** was used to find directories and files, the following images show the results:
 
     ![Fuzzing](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/u.a.-high-school/screenshots/02.png)
@@ -106,7 +106,7 @@ This is the writeup for the box U.A High School
 
     ![user.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/u.a.-high-school/screenshots/22.png)
 
-## 🐚💻🚀 8 Privilege Escalation
+## 🐚💻🚀 8. Privilege Escalation
 
 - I have tried to use the command ```sudo -l``` to check the privileges of the user ```deku```:
 
