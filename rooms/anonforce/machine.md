@@ -31,7 +31,7 @@ This is the writeup for the box Anonforce
 
   ![ftp-access](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/anonforce/screenshots/03.png)
 
--I found the first flag in the melodias directory, I downloaded it and I used ```cat user.txt``` to get the flag.
+- I found the first flag in the melodias directory, I downloaded it and I used ```cat user.txt``` to get the flag.
 
   ![user.txt](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/anonforce/screenshots/04.png)
 
