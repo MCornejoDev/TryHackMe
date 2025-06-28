@@ -43,15 +43,3 @@
 - And I decided to look at the source code and ta-da!!
 
     ![source](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/ohsint/screenshots/08.png)
-
-- Binwalk gives us some stuff
-
-    ![binwalk](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/ohsint/screenshots/09.png)
-
-- xxd gave you an online address
-
-    ![xxd](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/ohsint/screenshots/10.png)
-
-- And at first, steghide does not ask for a password:
-
-    ![steghide](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/ohsint/screenshots/11.png)
