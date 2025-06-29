@@ -11,4 +11,5 @@
 | Neighbour           | [Neighbour](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/neighbour/machine.md)                     |
 | OhSINT              | [OhSINT](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/ohsint/machine.md)                           |
 | Publisher           | [Publisher](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/publisher/machine.md)                     |
+| Simple CTF          | [Simple CTF](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/simple-ctf/machine.md)                   |
 | U.A. High School    | [U.A. High School](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/u.a.-high-school/machine.md)       |
