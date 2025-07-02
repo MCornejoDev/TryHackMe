@@ -1,8 +1,6 @@
 # TryHackMe
 
-<a href="https://tryhackme.com/p/MCornejoDev" target="_blank">
-  <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=365670" style="border:none; width:100%; height:100px;" loading="lazy"></iframe>
-</a>
+[![TryHackMe Profile](tryhackme.png)](https://tryhackme.com/p/MCornejoDev)
 
 ---
 
