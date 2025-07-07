@@ -33,14 +33,14 @@ This is the writeup for the box Agent Sudo
   Password: crystal
   ```
 
-## 📁📤📥 6. FTP Access
+## 📁📤📥 5. FTP Access
 - I try to use the following credentials to access the FTP by web browser and I get the following output:
 
   ![ftp-access](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/05.png)
 
 - After downloading the files, the text file contains information stating that the photos are fake.
 
-## 🕵️‍♂️🖼️ 7. Steganography
+## 🕵️‍♂️🖼️ 6. Steganography
 
 - I used binwalk tool to check if the image has hidden information and I could extract the files from the image cutie.png.
 
@@ -54,7 +54,7 @@ This is the writeup for the box Agent Sudo
 
   ![password-cracked](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/09.png)
 
-## 🔓🗝️💻 8. Password Cracking again
+## 🔓🗝️💻 7. Password Cracking again
 - I cracked the password of zip using the following command ```zip2john 8702.zip > hashed.txt``` and I used the following command ```john --format=zip hashed.txt``` 
 
   ![password-cracked](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/10.png)
@@ -63,12 +63,12 @@ This is the writeup for the box Agent Sudo
 
   ![file-content](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/11.png)
 
-## 🔓🗝️💻 9. Decrypting
+## 🔓🗝️💻 8. Decrypting
 - I used [cipher-identifier](https://www.dcode.fr/cipher-identifier) for decrypting ```QXJlYTUx``` and I got the following output:
 
   ![decrypted-text](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/12.png)
 
-## 🕵️‍♂️🖼️ 10. Steganography
+## 🕵️‍♂️🖼️ 9. Steganography
 - I am going to use steghide to extract the hidden information from the image ```cute-alien.jpg```.
 
   ![steghide](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/13.png)
@@ -82,7 +82,7 @@ This is the writeup for the box Agent Sudo
   Password: hackerrules!
   ```
 
-## 🌐🖥️ 11. SSH Access
+## 🌐🖥️ 10. SSH Access
 - I used the credentials to connect to the machine:
 
   ![ssh-access](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/15.png)
@@ -93,7 +93,7 @@ This is the writeup for the box Agent Sudo
   
   ![accident](https://github.com/MCornejoDev/TryHackMe/blob/main/rooms/chocolate-factory/screenshots/16.png)
 
-## 🐚💻🚀 12. Privilege Escalation
+## 🐚💻🚀 11. Privilege Escalation
 - I used the command ```sudo -l``` to check the privileges of the user ```james``` and I located a vulnerability in the sudoers file - https://blog.aquasec.com/cve-2019-14287-sudo-linux-vulnerability
 
 - If I use the command ```sudo -u#-1 bash``` I have gotten to be root user:
